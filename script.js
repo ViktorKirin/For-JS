@@ -19,3 +19,11 @@ alert('Your full name is : ' + promptUserName +" "+  promptSurname + ", your age
 let confirmAskAdmin = confirm("Are you admin?");
 // 8 step - show result
 alert('Your full name is : ' + promptUserName +" "+  promptSurname + ", your age is: " + promptOld + ', admin status: ' + confirmAskAdmin);
+
+
+// console.log(Boolean(alert('5')));
+// console.log( true > false);
+// console.log(true > 5);
+// console.log(true < '5');
+// console.log(true > null);
+
