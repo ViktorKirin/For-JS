@@ -1,29 +1,45 @@
-console.log('You can ignore single and double quotes like this: \\\'\\\'  \\\" \\\"');
+"use strict"
 
-// second exercise
-// 1 step - inform
-let alertEnterData = alert ('Please enter data')
-// 2 step - ask name
-let promptUserName = prompt("What's your name?", "Name");
-// 3 step - show result
-alert('Your name is: ' + promptUserName);
-// 4 step - ask surname
-let promptSurname = prompt("Enter your surname", "Surname");
-// 5 step - show result
-alert('Your full name is : ' + promptUserName +" "+  promptSurname);
-// 6 step - ask old
-let promptOld = prompt("How old are you?", "Age");
-// 7 step - show result
-alert('Your full name is : ' + promptUserName +" "+  promptSurname + ", your age is: " + promptOld);
-// 7 step - ask admin
-let confirmAskAdmin = confirm("Are you admin?");
-// 8 step - show result
-alert('Your full name is : ' + promptUserName +" "+  promptSurname + ", your age is: " + promptOld + ', admin status: ' + confirmAskAdmin);
+// ask 1 mounth
+let salaryFirstMounth = prompt("Enter first mounth salary", "1");
+console.log(salaryFirstMounth);
 
+if (salaryFirstMounth === null) {
+    alert('You do not want to enter a salary? We will indicate 0');
+    salaryFirstMounth = 0;
+} else if (isNaN(salaryFirstMounth)) {
+    alert('you have entered text, please enter a number. We will indicate 0' );
+    salaryFirstMounth = 0;
+}
+console.log(salaryFirstMounth);
 
-// console.log(Boolean(alert('5')));
-// console.log( true > false);
-// console.log(true > 5);
-// console.log(true < '5');
-// console.log(true > null);
+// ask 2 mounth
+let salarySecondMounth = prompt("Enter second mounth salary", "2");
+if (salarySecondMounth === null) {
+    alert('You do not want to enter a salary? We will indicate 0');
+    salarySecondMounth = 0;
+} else if (isNaN(salarySecondMounth)) {
+    alert('you have entered text, please enter a number. We will indicate 0' );
+    salarySecondMounth = 0;
+}
+console.log(salarySecondMounth);
+
+// show sum 1+2 mounth
+let salarySum = Number(salaryFirstMounth)  + Number(salarySecondMounth) ;
+alert('Your salary for 2 month is: ' + salarySum + '$');
+console.log(salarySum);
+
+// show sum + bonus
+let salaryBonus = 1;
+let totalSalary = salarySum + salaryBonus;
+alert('Your have extra bonus! Your total salary was: ' + salarySum + '$' + ' It\'s increase for ' + salaryBonus + '$ and now it is: ' + totalSalary + '$');
+console.log(totalSalary);
+
+// if else show message
+if (totalSalary < 2000) {
+    alert('I am out');
+} else if (totalSalary >= 2000) {
+    alert('I am ready to work');
+}
+
 
