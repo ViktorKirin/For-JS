@@ -3,7 +3,7 @@ let anyNumber = prompt ("Enter any positive number" , "100");
 let summ;
 anyNumber = Number(anyNumber);
 console.log (anyNumber);
-while (isNaN(anyNumber)) {
+while (isNaN(anyNumber) || anyNumber === 0) {
     anyNumber = prompt ("Your number is incorect, please enter corect number" , "100");
     anyNumber = Number(anyNumber);
     } 
