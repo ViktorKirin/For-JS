@@ -36,9 +36,9 @@ function deepCount(i) {
 console.log(deepCount(b));
 // console.log(deepCount(c));
 
-console.log(deepCount([1, 2, 3])); //3
-console.log(deepCount(["x", "y", ["z"]])); //4
-console.log(deepCount([1, 2, [3, 4, [5]]])); //7
+// console.log(deepCount([1, 2, 3])); //3
+// console.log(deepCount(["x", "y", ["z"]])); //4
+// console.log(deepCount([1, 2, [3, 4, [5]]])); //7
 
 
 // Задание №3 - посчитать количество элементов в массве
