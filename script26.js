@@ -24,13 +24,13 @@ Object.setPrototypeOf(sportCar, car);
 Object.setPrototypeOf(passengerCar, car);
 Object.setPrototypeOf(toyCar, sportCar);
 
-// console.log(car);
-// console.log(sportCar);
-// console.log(passengerCar);
-// console.log(toyCar);
+console.log(car);
+console.log(sportCar);
+console.log(passengerCar);
+console.log(toyCar);
 console.log(Object.getPrototypeOf(toyCar));
 console.log(Object.getPrototypeOf(Object.getPrototypeOf(toyCar)));
-console.log(`${Object.getPrototypeOf(toyCar)} and ${Object.getPrototypeOf(Object.getPrototypeOf(toyCar))}`)
+// console.log(`${Object.getPrototypeOf(toyCar)} and ${Object.getPrototypeOf(Object.getPrototypeOf(toyCar))}`)
 
 // Задание №2 Исправить код, начисление заработной платы каждому специалисту
 
@@ -79,10 +79,10 @@ console.log(user_2);
 // Задание №4 
 
 function Usertype(name) {
-    for (let i = 0; i < name.lenght; ++i) {
+    for(let i = 0; i < name.length; ++i) {
         this[i] = name[i];
-        if (i + 1 == name.lenght) {
-            Object.defineProperty (this, 'lenght', {
+        if (i + 1 == name.length) {
+            Object.defineProperty(this, 'length', {
                 enumerable: true,
                 writable: false,
                 configurable: true,
@@ -90,8 +90,9 @@ function Usertype(name) {
             });
         }
     }
+    this.join = Array.prototype.join;
 }
 
-let admins = new Usertype (['Mike', 'Bob', 'Nikola']);
-admins.join = Array.prototype.join;
+let admins = new Usertype(['Mike', 'Bob', 'Nikola']);
+
 console.log(admins.join('; '));
