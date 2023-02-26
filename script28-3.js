@@ -53,19 +53,22 @@
     }
     function multiply(values) {
          return +values[0] * +values[2];
+    } 
+    function divide (value) {
+         return values[0] / values[2];
     }
 
    
      try {
           // count('5*2')
-          count(5*2)
+ console.log(count('5*2')) //line2
 
      } catch (error) {
                console.log(error.name + ': ' + error.message);  
      }
      
 
-//  console.log(count(5*2)) //line2
+ // console.log(count(5*2)) //line2
 //     console.log(count('2/0'))
 //     console.log(count('5-2'))
 //     console.log(count('5+2'))
